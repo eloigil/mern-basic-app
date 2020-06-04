@@ -20,12 +20,12 @@ class ItemsLIst extends Component {
     return (
       <div>
         <ul>
-          {items.map(({id, name}) => (
-            <li key={id}>
+          {items.map(({_id, name}) => (
+            <li key={_id}>
               <span>{name} </span>
               <button
                 style={{marginBottom: '2rem', color: "white", backgroundColor: "red", padding: '4px 8px'}}
-                onClick={this.onDeleteClick.bind(this, id)}
+                onClick={this.onDeleteClick.bind(this, _id)}
               >X</button>
             </li>
           ))}

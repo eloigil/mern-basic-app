@@ -21,7 +21,6 @@ class ItemModal extends Component {
   handleSubmit = e => {
     e.preventDefault()
     const newItem = {
-      id: `${Math.floor(Math.random()*1000)}`,
       name: this.state.name
     }
 
