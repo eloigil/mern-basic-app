@@ -1,14 +1,21 @@
 import React from 'react';
 import './App.css';
+import ItemModal from './components/ItemModal';
 import ItemsLIst from './components/ItemsList';
+
+import { Provider } from 'react-redux'
+import store from './store'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world!</h1>
+    <Provider store={store}>
+      <div className="App">
+        <h1>Hello world!</h1>
 
-      <ItemsLIst />
-    </div>
+        <ItemModal />
+        <ItemsLIst />
+      </div>
+    </Provider>
   );
 }
 
